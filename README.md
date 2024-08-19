@@ -5,7 +5,7 @@ Bem-vindo ao repositório do front-end para o projeto do Hackathon BRASA 2024. E
 
 ## Visão Geral
 
-Este projeto foi desenvolvido como parte do Hackathon BRASA 2024, com o objetivo de criar uma solução inovadora para [descrição breve do problema que está sendo resolvido]. O foco deste repositório é a implementação do front-end, proporcionando uma interface de usuário responsiva e intuitiva.
+Este projeto foi desenvolvido como parte do Hackathon BRASA 2024. O foco deste repositório é a implementação do front-end, proporcionando uma interface de usuário responsiva e intuitiva.
 
 ## Estrutura do Projeto
 
