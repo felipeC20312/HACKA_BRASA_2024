@@ -1,73 +1,36 @@
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# HACKA_BRASA_2024_frontend
+## Getting Started
 
-Bem-vindo ao repositório do front-end para o projeto do Hackathon BRASA 2024. Este documento oferece uma visão geral do projeto, as tecnologias utilizadas e como você pode contribuir.
+First, run the development server:
 
-## Visão Geral
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Este projeto foi desenvolvido como parte do Hackathon BRASA 2024. O foco deste repositório é a implementação do front-end, proporcionando uma interface de usuário responsiva e intuitiva.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Estrutura do Projeto
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-A estrutura do projeto é organizada da seguinte forma:
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-- **/src**: Contém o código-fonte do front-end.
-- **/public**: Arquivos públicos e estáticos.
-- **/components**: Componentes React reutilizáveis.
-- **/services**: Integrações com APIs e outras funcionalidades externas.
-- **/styles**: Estilos globais e específicos dos componentes.
+## Learn More
 
-## Tecnologias Utilizadas
+To learn more about Next.js, take a look at the following resources:
 
-- **React**: Biblioteca principal para construção da interface.
-- **TypeScript**: Tipagem estática para melhorar a robustez do código.
-- **Vite**: Bundler de desenvolvimento estrutural para projetos.
-- **_**: Framework de componentes UI para React.
-- **_**: Cliente HTTP para consumir APIs.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Instalação
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Para configurar o projeto localmente, siga os passos abaixo:
+## Deploy on Vercel
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/HACKA_BRASA_2024_frontend.git
-   ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd HACKA_BRASA_2024_frontend
-   ```
-3. Instale as dependências:
-   ```bash
-   npm install
-   ```
-4. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm start
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Como Contribuir
-
-Contribuições são bem-vindas! Para começar:
-
-1. Crie uma branch para a sua funcionalidade ou correção de bug:
-   ```bash
-   git checkout -b sua-branch
-   ```
-2. Faça commit das suas alterações:
-   ```bash
-   git commit -m 'Descrição do que foi feito'
-   ```
-3. Envie as mudanças:
-   ```bash
-   git push origin sua-branch
-   ```
-4. Abra um Pull Request e descreva as alterações propostas.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License. Para mais detalhes, consulte o arquivo LICENSE.
-
-## Contato
-
-Em caso de dúvidas ou sugestões, sinta-se à vontade para entrar em contato através do [seu email ou outra forma de contato].
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
