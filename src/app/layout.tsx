@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 
 import "react-loading-skeleton/dist/skeleton.css";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

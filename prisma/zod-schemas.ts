@@ -9,3 +9,17 @@ export const ClientSetupFormSchema = z.object({
     state: z.string().max(120),
     businessType: z.string(),
 })
+
+export const RecebiveisSchema = z.object({
+    name: z.string().min(4),
+    description: z.string(),
+    targetAmount: z.number().positive(),
+    rentability: z.number().positive(),
+    paymentType: z.string(),
+    endDate: z.string().min(1, {"message" : "A data de término é obrigatória"}),
+    status: z.string(),
+})
+
+export const InvestmentSchema = z.object({
+    amount: z.number().positive(),
+})
