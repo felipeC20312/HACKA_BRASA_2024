@@ -11,11 +11,11 @@ export const ClientSetupFormSchema = z.object({
 })
 
 export const RecebiveisSchema = z.object({
-    name: z.string(),
+    name: z.string().min(4),
+    description: z.string(),
     targetAmount: z.number().positive(),
     rentability: z.number().positive(),
-    amountRaised: z.number().positive(),
-    dueDate: z.string(),
+    paymentType: z.string(),
+    endDate: z.string().min(1, {"message" : "A data de término é obrigatória"}),
     status: z.string(),
-    alerts: z.number(),
 })

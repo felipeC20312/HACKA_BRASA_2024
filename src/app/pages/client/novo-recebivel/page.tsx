@@ -1,3 +1,4 @@
+import CreateRecebivelForm from "@/components/forms/CreateRecebivelForm";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
         <div className="w-screen h-auto min-h-screen flex">
             <Navbar />
             <div className="flex-1 p-4">
-                <p>Novo Recebivel</p>
+                <CreateRecebivelForm />
             </div>
         </div>
     );

@@ -105,7 +105,7 @@ model Recebivel {
 
   status String // Status do recebivel: "Aberto, Pagando, Captado, Falido"
 
-  moneyRaised Float // How many tokens have been purchased
+  moneyRaised Float @default(0) // How many tokens have been purchased
 
   // Relacionamento com a tabela Cliente: Quem criou o recebivel
   owner Client @relation(fields: [ownerId], references: [userId])

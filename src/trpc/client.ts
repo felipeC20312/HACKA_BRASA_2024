@@ -108,6 +108,48 @@ export const appRouter = router({
 
         return { success: true }
     }),
+    createRecebivel: privateProcedure.input(z.object({
+        name: z.string(),
+        description: z.string(),
+        targetAmount: z.number().positive(),
+        rentability: z.number().positive(),
+        paymentType: z.string(),
+        endDate: z.union([z.coerce.date(), z.string()]),
+        status: z.string(),
+    })).mutation(async ({ctx, input}) => {
+        const { userId } = ctx
+
+        const dbUser = await db.user.findFirst({
+            where: {
+                id: userId,
+            },
+        });
+
+        if (!dbUser) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+        try {
+            await db.recebivel.create({
+                data: {
+                    name: input.name,
+                    description: input.description,
+                    targetAmount: input.targetAmount,
+                    rentability: input.rentability,
+                    paymentType: input.paymentType,
+                    startDate: new Date(),
+                    endDate: new Date(input.endDate),
+                    status: input.status,
+                    ownerId: userId,
+                    moneyRaised: 0,
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
+
+        return { success: true }
+    }),
 })
 
 export type AppRouter = typeof appRouter
