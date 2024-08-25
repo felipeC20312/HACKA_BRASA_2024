@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
 import { BrainIcon } from "lucide-react";
 import { Badge } from "../ui/badge";
 
-export const RecebivelCard = ({ recebivel } : {recebivel: Recebivel}) => {
+export const InvestmentCard = ({ recebivel, investedAmount } : {recebivel: Recebivel, investedAmount: Number}) => {
     return (
         <Card className="w-full h-[250px] p-4 shadow-sm shadow-gray-700 truncate">
             <CardTitle className="text-lg">
@@ -17,7 +17,7 @@ export const RecebivelCard = ({ recebivel } : {recebivel: Recebivel}) => {
                 <span className="font-bold">{recebivel.name}</span>
 
                 <span className="text-[#00B8AD] text-sm flex flex-row gap-1">
-                    {recebivel.moneyRaised.toLocaleString('en-US', {
+                    {investedAmount.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                     })}

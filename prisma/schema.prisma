@@ -103,7 +103,7 @@ model Recebivel {
   startDate DateTime
   endDate DateTime
 
-  status String // Status do recebivel: "Aberto, Pagando, Captado, Falido"
+  status Status
 
   moneyRaised Float @default(0) // How many tokens have been purchased
 
@@ -114,6 +114,13 @@ model Recebivel {
   Contract Contract[]
 
   @@index([ownerId])
+}
+
+enum Status {
+  Aberto
+  Pagando
+  Captado
+  Falido
 }
 
 // Quando o user compra um ou mais tokens de um recebivel, ele tem um contrato

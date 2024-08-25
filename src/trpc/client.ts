@@ -3,7 +3,8 @@ import { privateProcedure, publicProcedure, router } from "./trpc"
 import { TRPCError } from "@trpc/server";
 import { db } from "@/app/db";
 import { z } from 'zod'
-import { Role } from "@prisma/client";
+import { Role, Status } from "@prisma/client";
+import { create } from "domain";
 
 // TODO: User Type, how to determine on account creation?
 
@@ -139,9 +140,60 @@ export const appRouter = router({
                     paymentType: input.paymentType,
                     startDate: new Date(),
                     endDate: new Date(input.endDate),
-                    status: input.status,
+                    status: Status.Aberto,
                     ownerId: userId,
                     moneyRaised: 0,
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
+
+        return { success: true }
+    }),
+    createInvestment: privateProcedure.input(z.object({
+        amount: z.number().positive(),
+        recebivelId: z.string(),
+    })).mutation(async ({ctx, input}) => {
+        const { userId } = ctx
+
+        const dbUser = await db.user.findFirst({
+            where: {
+                id: userId,
+            },
+        });
+
+        if (!dbUser) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+        const recebivel = await db.recebivel.findFirst({
+            where: {
+                id: input.recebivelId,
+            },
+        });
+
+        if (!recebivel) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+        try {
+            await db.contract.create({
+                data: {
+                    tokensBought: input.amount,
+                    recebivelId: input.recebivelId,
+                    investorId: userId,
+                }
+            })
+
+            await db.recebivel.update({
+                where: {
+                    id: input.recebivelId,
+                },
+                data: {
+                    moneyRaised: {
+                        increment: input.amount
+                    }
                 }
             })
         } catch (e) {

@@ -19,3 +19,7 @@ export const RecebiveisSchema = z.object({
     endDate: z.string().min(1, {"message" : "A data de término é obrigatória"}),
     status: z.string(),
 })
+
+export const InvestmentSchema = z.object({
+    amount: z.number().positive(),
+})

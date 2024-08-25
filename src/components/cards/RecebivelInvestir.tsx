@@ -1,11 +1,13 @@
 import { Recebivel } from "@prisma/client";
 import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
-import { BrainIcon } from "lucide-react";
+import { BrainIcon, HandCoins } from "lucide-react";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { MakeInvestment } from "../dialogs/MakeInvestment";
 
-export const RecebivelCard = ({ recebivel } : {recebivel: Recebivel}) => {
+export const RecebivelInvestirCard = ({ recebivel } : {recebivel: Recebivel}) => {
     return (
-        <Card className="w-full h-[250px] p-4 shadow-sm shadow-gray-700 truncate">
+        <Card className="w-full h-[300px] p-4 shadow-sm shadow-gray-700 truncate">
             <CardTitle className="text-lg">
                 <div className="w-full justify-between flex flex-row p-4">
                     <BrainIcon size={25}/>
@@ -21,7 +23,7 @@ export const RecebivelCard = ({ recebivel } : {recebivel: Recebivel}) => {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                     })}
-                    <span>de</span>
+                    <span>of</span>
                     {recebivel.targetAmount.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
@@ -54,6 +56,7 @@ export const RecebivelCard = ({ recebivel } : {recebivel: Recebivel}) => {
                         </span>
                     </div>
                 </div>
+                <MakeInvestment recebivel={recebivel}/>
             </CardContent>
         </Card>
     );

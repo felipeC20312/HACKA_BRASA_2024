@@ -28,6 +28,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { Slider } from '../ui/slider'
 import { cn } from '@/lib/utils'
 import { MessageCircleIcon, MessageCircleWarning } from 'lucide-react'
+import { Status } from '@prisma/client';
 
 const CreateRecebivelForm = () => {
 
@@ -84,7 +85,7 @@ const CreateRecebivelForm = () => {
         rentability: data.rentability,
         paymentType: data.paymentType || "mensal",
         endDate: data.endDate,
-        status: "Em andamento",
+        status: Status.Aberto,
     })
   }
 
