@@ -4,9 +4,8 @@ import { trpc } from "@/app/_trpc/client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Loader2 } from "lucide-react";
-import { notFound, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 // 2 steps, choose account type and then fill in the details.
 export default function Home() {
@@ -43,7 +42,7 @@ export default function Home() {
                             isLoadingInvestor ? <Loader2 width={16} className="text-black animate-spin"/> : "Investidor"
                         }
                     </Button>
-                    <Button onClick={()=>alert("suck my...")}>
+                    <Button onClick={()=>router.push('/pages/account-setup/client-setup')}>
                         Client
                     </Button>
                 </CardContent>

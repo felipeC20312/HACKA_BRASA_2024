@@ -53,14 +53,58 @@ export const appRouter = router({
             throw new TRPCError({ code: 'NOT_FOUND' })
         }
 
-        await db.user.update({
+
+        try {
+            await db.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    role: Role.Investor,
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
+
+        return { success: true }
+    }),
+    clientSetup: privateProcedure.input(z.object({
+        cnpj: z.string().length(14),
+        businessName: z.string().max(120),
+        address: z.string().max(120),
+        CEP: z.string().length(8),
+        city: z.string().max(120),
+        state: z.string().max(120),
+        businessType: z.string(),
+    })).mutation(async ({ctx, input}) => {
+        const { userId } = ctx
+
+        const dbUser = await db.user.findFirst({
             where: {
                 id: userId,
             },
-            data: {
-                role: Role.Investor,
-            }
-        })
+        });
+
+        if (!dbUser) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+        try {
+            await db.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    role: Role.Client,
+                    client: {
+                        create: input
+                    }
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
 
         return { success: true }
     }),
