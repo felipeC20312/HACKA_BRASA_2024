@@ -1,15 +1,15 @@
 import { db } from "@/app/db";
 import Alert from "@/components/cards/Alert";
 import Navbar from "@/components/Navbar";
-import { columns, Recebiveis } from "@/components/tables/client-investment-table/columns";
+import { columns } from "@/components/tables/client-investment-table/columns";
 import { DataTable } from "@/components/tables/client-investment-table/data-table";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Bell, HandCoins } from "lucide-react";
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -53,11 +53,11 @@ export default async function Home() {
                             Transforme suas oportunidades em liquidez imediata! Tokenize seus recebíveis e acesse uma rede global de investidores. Facilite a antecipação de crédito e maximize o potencial do seu capital.
                         </CardDescription>
                         <CardContent className="pt-4">
-                            <Button>
-                                <span className="flex flex-row gap-2 justify-start items-start">
-                                    <HandCoins/> Criar proposta de investimento
+                            <Link href={'/pages/client/novo-recebivel'} className="inline-block">
+                                <span className="inline-flex flex-row gap-2 items-center border max-w-[300px] p-3 rounded-md bg-slate-100 border-black text-black hover:bg-white">
+                                    <HandCoins /> Criar proposta de investimento
                                 </span>
-                            </Button>
+                            </Link>
                         </CardContent>
                     </Card>
                     <div className="w-full flex flex-row gap-8">
