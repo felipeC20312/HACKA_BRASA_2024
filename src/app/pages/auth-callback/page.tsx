@@ -3,7 +3,7 @@
 // Makes the link between DB user and authenticated user.
 
 import { notFound, useRouter, useSearchParams } from "next/navigation";
-import { trpc } from "../_trpc/client";
+import { trpc } from "../../_trpc/client";
 import { Loader2 } from "lucide-react";
 import { Suspense, useEffect } from "react";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
@@ -29,11 +29,11 @@ const PageContent = ({router} : {router: AppRouterInstance}) => {
             console.log("Success", data)
             if (data?.success && data?.role === Role.None) {
                 router.refresh()
-                router.push('/account-setup')
+                router.push('/pages/account-setup')
             } else if (data?.success && data?.role === Role.Client) {
-                router.push('/client/dashboard')
+                router.push('/pages/client/dashboard')
             } else if (data?.success && data?.role === Role.Investor) {
-                router.push('/investor/dashboard')
+                router.push('/pages/investor/dashboard')
             } else {
                 notFound()
             }
@@ -53,7 +53,7 @@ const PageContent = ({router} : {router: AppRouterInstance}) => {
     return (
         <div className='w-full mt-24 flex justify-center'>
             <div className="flex flex-col items-center gap-2">
-                <Loader2 className="animate-spin w-12 h-12" color="#0066FF" />
+                <Loader2 className="animate-spin w-12 h-12" color="white" />
                 <h3 className="font-semibold text-xl">Setting up your account...</h3>
             </div>
         </div>
