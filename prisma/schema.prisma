@@ -22,7 +22,7 @@ enum Role {
 
 model Wallet {
   id        String   @id @default(cuid())
-  balance   Float
+  balance   Float    // Balance is number of tokens.
   // Relacionamento com a tabela Cliente
   // Relacionamento com a tabela Investidor
 
@@ -65,10 +65,75 @@ model Client {
 
   // Razão Social: Tipo da empresa
   businessType String
+
+  grade Float @default(10)// Nota de crédito da empresa
+
+  Recebivel Recebivel[]
 }
 
 // Quem compra tokens
 model Investor {
   user User @relation(fields: [userId], references: [id])
   userId String @unique
+
+  Contract Contract[]
+}
+
+model Token {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Um ativo que pode ser comprado e vendido
+// O recebivel pertence a um usuario de tipo Cliente
+// O recebivel tem um contrato com um ou mais investidores
+model Recebivel {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name String
+  description String
+  targetAmount Float // tokens is inputMoney number of tokens
+  rentability Float // Rentabilidade do recebivel, em porcentagem.
+
+  paymentType String // Semanal, Mensal, Semestral, Anual
+
+  startDate DateTime
+  endDate DateTime
+
+  status String // Status do recebivel: "Aberto, Pagando, Captado, Falido"
+
+  moneyRaised Float // How many tokens have been purchased
+
+  // Relacionamento com a tabela Cliente: Quem criou o recebivel
+  owner Client @relation(fields: [ownerId], references: [userId])
+  ownerId String
+
+  Contract Contract[]
+
+  @@index([ownerId])
+}
+
+// Quando o user compra um ou mais tokens de um recebivel, ele tem um contrato
+// com aquele recebivel.
+model Contract {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relacionamento com a tabela Recebivel
+  recebivel Recebivel @relation(fields: [recebivelId], references: [id])
+  recebivelId String
+
+  // Relacionamento com a tabela Investidor
+  investor Investor @relation(fields: [investorId], references: [userId])
+  investorId String
+  
+  // Quantidade de tokens comprados
+  tokensBought Int
+
+  @@index([recebivelId])
+  @@index([investorId])
 }
