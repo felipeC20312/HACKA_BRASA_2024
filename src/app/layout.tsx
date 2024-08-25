@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="dark">
       <Providers>
         <body className={cn('min-h-screen font-sans antialiased grainy overflow-hidden', inter.className)}>
           <ScrollArea className="h-screen w-screen">

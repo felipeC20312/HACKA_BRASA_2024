@@ -1,7 +1,9 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { publicProcedure, router } from "./trpc"
+import { privateProcedure, publicProcedure, router } from "./trpc"
 import { TRPCError } from "@trpc/server";
 import { db } from "@/app/db";
+import { z } from 'zod'
+import { Role } from "@prisma/client";
 
 // TODO: User Type, how to determine on account creation?
 
@@ -36,6 +38,75 @@ export const appRouter = router({
         });
 
         return { success: true, role: dbUser?.role }
+    }),
+    investorSetup: privateProcedure.mutation(async ({ctx}) => {
+
+        const { userId } = ctx
+
+        const dbUser = await db.user.findFirst({
+            where: {
+                id: userId,
+            },
+        });
+
+        if (!dbUser) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+
+        try {
+            await db.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    role: Role.Investor,
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
+
+        return { success: true }
+    }),
+    clientSetup: privateProcedure.input(z.object({
+        cnpj: z.string().length(14),
+        businessName: z.string().max(120),
+        address: z.string().max(120),
+        CEP: z.string().length(8),
+        city: z.string().max(120),
+        state: z.string().max(120),
+        businessType: z.string(),
+    })).mutation(async ({ctx, input}) => {
+        const { userId } = ctx
+
+        const dbUser = await db.user.findFirst({
+            where: {
+                id: userId,
+            },
+        });
+
+        if (!dbUser) {
+            throw new TRPCError({ code: 'NOT_FOUND' })
+        }
+
+        try {
+            await db.user.update({
+                where: {
+                    id: userId,
+                },
+                data: {
+                    role: Role.Client,
+                    client: {
+                        create: input
+                    }
+                }
+            })
+        } catch (e) {
+            return { success: false, error: e }
+        }
+
+        return { success: true }
     }),
 })
 
