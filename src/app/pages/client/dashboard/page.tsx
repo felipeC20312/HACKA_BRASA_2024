@@ -1,15 +1,20 @@
+import { db } from "@/app/db";
 import Alert from "@/components/cards/Alert";
 import Navbar from "@/components/Navbar";
-import { columns, Payment } from "@/components/tables/client-investment-table/columns";
+import { columns, Recebiveis } from "@/components/tables/client-investment-table/columns";
 import { DataTable } from "@/components/tables/client-investment-table/data-table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { AlertOctagonIcon, Bell, HandCoins } from "lucide-react";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { Bell, HandCoins } from "lucide-react";
 
-export default function Home() {
+export default async function Home() {
+
+    const { getUser } = getKindeServerSession();
+    const user = await getUser();
 
     const alerts = [
         {
@@ -28,20 +33,11 @@ export default function Home() {
 
     const randomIndices = Array.from({ length: 21 }, () => Math.floor(Math.random() * 2));
 
-    const payments: Payment[] = [
-        {
-          id: "728ed52f",
-          amount: 100,
-          status: "pending",
-          email: "m@example.com",
-        },
-        {
-          id: "489e1d42",
-          amount: 125,
-          status: "processing",
-          email: "example@gmail.com",
-        },
-    ]
+    const recebiveis = await db.recebivel.findMany({
+        where: {
+            ownerId: user?.id
+        }
+    });
 
     return (
         <div className="w-screen h-auto min-h-screen flex">
@@ -96,7 +92,13 @@ export default function Home() {
                     </div>
                     <div>
                         {/* TODO: TABLE OF INVESTMENTS*/}
-                        <DataTable columns={columns} data={payments}/>
+                        <DataTable columns={columns} data={recebiveis.map((r) => {
+                            return {
+                                ...r,
+                                dueDate: new Date(r.endDate).toLocaleDateString(),
+                                alerts: 2,
+                            }
+                        })}/>
                     </div>
                 </div>
                 <div className="w-[35%] flex flex-col gap-4">

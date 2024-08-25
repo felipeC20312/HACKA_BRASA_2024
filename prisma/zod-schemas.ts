@@ -9,3 +9,13 @@ export const ClientSetupFormSchema = z.object({
     state: z.string().max(120),
     businessType: z.string(),
 })
+
+export const RecebiveisSchema = z.object({
+    name: z.string(),
+    targetAmount: z.number().positive(),
+    rentability: z.number().positive(),
+    amountRaised: z.number().positive(),
+    dueDate: z.string(),
+    status: z.string(),
+    alerts: z.number(),
+})
