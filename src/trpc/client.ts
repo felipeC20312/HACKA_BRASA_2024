@@ -7,7 +7,6 @@ import { db } from "@/app/db";
 
 export const appRouter = router({
     authCallback: publicProcedure.mutation(async () => {
-        console.log("1")
         const { getUser } = getKindeServerSession();
         const user = await getUser();
 
@@ -15,16 +14,12 @@ export const appRouter = router({
             throw new TRPCError({ code: 'UNAUTHORIZED' })
         }
 
-        console.log("2")
-
         // check if user in the db
         let dbUser = await db.user.findFirst({
             where: {
                 id: user.id,
             },
         });
-
-        console.log("3", dbUser)
 
         if (!dbUser) {
             await db.user.create({
@@ -39,8 +34,6 @@ export const appRouter = router({
                 id: user.id,
             },
         });
-
-        console.log("4", dbUser)
 
         return { success: true, role: dbUser?.role }
     }),

@@ -10,8 +10,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Blueprint",
-  description: "Blueprint is a platform that empowers communities by unlocking capital stewardship.",
+  title: "",
+  description: "",
 };
 
 export default function RootLayout({
