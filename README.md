@@ -5,8 +5,8 @@ Este repositório contém o código e a documentação do nosso projeto para o H
 Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao mercado de capitais que as grandes corporações. Nossa solução de tokenização facilita a emissão de tokens lastreados por recebíveis, regidos por contratos inteligentes personalizados para cada devedor. Além disso, oferecemos aos investidores fácil acesso a diversas oportunidades de investimento, permitindo o acompanhamento detalhado do rendimento de seus tokens em suas carteiras individuais.
 
 # Funcionalidades Principais
- + Diversificação de Ativos: Tokenização de diversos tipos de recebíveis, como cartões, notas comerciais, imóveis, agro, energia e infraestrutura.
- + Governança e Compliance: Medidas rigorosas para assegurar a transparência e conformidade regulatória.
+ + Diversificação de Ativos: Tokenização de diversos tipos de recebíveis de acordo com a necessidade dos devedores.
+ + Governança e Compliance: Medidas rigorosas para assegurar a transparência e conformidade regulatória para investimentos.
  + Automação e Eficiência: Uso de contratos inteligentes para automatizar a emissão, gestão e liquidação de tokens.
  + Segurança: Garantia de segurança dos dados e conformidade com as regulamentações vigentes.
 
@@ -20,7 +20,7 @@ Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao m
 
 # Componentes para Plataforma (Gestão):
  + Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
- + Relatórios Detalhados: Acompanhamento do desempenho dos títulos emitidos.
+ + Manejo de Dados e Tokens: Gestão centralizada de dados e tokens vinculados a contratos inteligentes, garantindo a integridade das transações e o monitoramento contínuo das condições contratuais.
 
 # Tecnologias Utilizadas
  + Ethereum Blockchain & Smart Contracts: Automação de processos de tokenização.
