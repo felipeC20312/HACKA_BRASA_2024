@@ -12,20 +12,21 @@ Automação e Eficiência: Uso de contratos inteligentes para automatizar a emis
 Segurança: Garantia de segurança dos dados e conformidade com as regulamentações vigentes.
 Componentes
 
-#Para Investidores:
+# Para Investidores:
  + Investimento: Avaliação de ativos, aporte e acompanhamento.
  + Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
  
-#Para Devedores:
+# Para Devedores:
  + Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
  + Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
 
-Para Plataforma (Gestão):
-Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
-Relatórios Detalhados: Acompanhamento do desempenho dos títulos emitidos.
-Governança e Compliance: Transparência e conformidade com medidas rigorosas.
-Execução de Garantias: Processos automatizados para execução de garantias em casos de inadimplência.
-Tecnologias Utilizadas
+#Para Plataforma (Gestão):
+ + Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
+ + Relatórios Detalhados: Acompanhamento do desempenho dos títulos emitidos.
+ + Governança e Compliance: Transparência e conformidade com medidas rigorosas.
+ + Execução de Garantias: Processos automatizados para execução de garantias em casos de inadimplência.
+
+# Tecnologias Utilizadas
 Blockchain & Smart Contracts: Automação de processos de tokenização.
 Frontend: Interface de usuário intuitiva para interação com a plataforma (caso aplicável).
 Backend: Integração segura e eficiente com sistemas externos para recursos fiat e indexadores.
