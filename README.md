@@ -21,16 +21,12 @@ Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao m
 # Componentes para Plataforma (Gestão):
  + Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
  + Relatórios Detalhados: Acompanhamento do desempenho dos títulos emitidos.
- + Governança e Compliance: Transparência e conformidade com medidas rigorosas.
- + Execução de Garantias: Processos automatizados para execução de garantias em casos de inadimplência.
 
 # Tecnologias Utilizadas
-Blockchain & Smart Contracts: Automação de processos de tokenização.
-Frontend: Interface de usuário intuitiva para interação com a plataforma (caso aplicável).
-Backend: Integração segura e eficiente com sistemas externos para recursos fiat e indexadores.
-Segurança: Implementação de práticas robustas de segurança para proteção de dados e conformidade regulatória.
-Como Rodar o Projeto
-Instruções para configuração e execução do projeto localmente:
+ + Ethereum Blockchain & Smart Contracts: Automação de processos de tokenização.
+ + Frontend: Interface de usuário intuitiva para interação com a plataforma, com distinção para o dashboard de devedores e investidores.
+ + Backend: Conexão segura e eficiente com recursos externos, administração de bases de dados interna e criação sistemas para integração e transferência de tokens.
+ + Segurança: Implementação de práticas robustas de segurança para proteção de dados e conformidade regulatória.
 
 # Licença
 Este projeto está licenciado sob a MIT License.
