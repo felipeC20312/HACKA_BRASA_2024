@@ -1,7 +1,7 @@
 # HACKA_BRASA_2024: Tokenização para Democratização do Mercado de Capitais
 Este repositório contém o código e a documentação do nosso projeto para o HACKA_BRASA 2024. Nosso objetivo é desenvolver uma solução inovadora de tokenização que facilite o acesso ao mercado de capitais, especialmente para pequenas e médias empresas. A solução visa permitir que investidores diversifiquem seus portfólios com ativos de alta qualidade de forma transparente, eficiente e segura.
 
-Descrição do Projeto
+#Descrição do Projeto 
 Visão Geral
 Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao mercado de capitais que as grandes corporações. Nossa solução de tokenização facilita a emissão de tokens lastreados por recebíveis, regidos por contratos inteligentes personalizados para cada devedor. Além disso, oferecemos aos investidores fácil acesso a diversas oportunidades de investimento, permitindo o acompanhamento detalhado do rendimento de seus tokens em suas carteiras individuais.
 
@@ -12,13 +12,13 @@ Automação e Eficiência: Uso de contratos inteligentes para automatizar a emis
 Segurança: Garantia de segurança dos dados e conformidade com as regulamentações vigentes.
 Componentes
 
-*Para Investidores:
- *Investimento: Avaliação de ativos, aporte e acompanhamento.
- *Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
+#Para Investidores:
+ + Investimento: Avaliação de ativos, aporte e acompanhamento.
+ + Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
  
-*Para Devedores:
- *Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
- *Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
+#Para Devedores:
+ + Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
+ + Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
 
 Para Plataforma (Gestão):
 Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
