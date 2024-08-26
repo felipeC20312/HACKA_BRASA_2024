@@ -3,7 +3,7 @@ Este repositório contém o código e a documentação do nosso projeto para o H
 
 Descrição do Projeto
 Visão Geral
-Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao mercado de capitais que grandes corporações. Nossa solução de tokenização permite a emissão de tokens lastreados por recebíveis, democratizando o acesso ao crédito e oferecendo uma estrutura robusta e transparente tanto para empresas quanto para investidores.
+Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao mercado de capitais que as grandes corporações. Nossa solução de tokenização facilita a emissão de tokens lastreados por recebíveis, regidos por contratos inteligentes personalizados para cada devedor. Além disso, oferecemos aos investidores fácil acesso a diversas oportunidades de investimento, permitindo o acompanhamento detalhado do rendimento de seus tokens em suas carteiras individuais.
 
 Funcionalidades Principais
 Diversificação de Ativos: Tokenização de diversos tipos de recebíveis, como cartões, notas comerciais, imóveis, agro, energia e infraestrutura.
@@ -11,16 +11,16 @@ Governança e Compliance: Medidas rigorosas para assegurar a transparência e co
 Automação e Eficiência: Uso de contratos inteligentes para automatizar a emissão, gestão e liquidação de tokens.
 Segurança: Garantia de segurança dos dados e conformidade com as regulamentações vigentes.
 Componentes
-Para Investidores:
 
-Investimento: Avaliação de ativos, aporte e acompanhamento.
-Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
-Para Devedores:
+*Para Investidores:
+ *Investimento: Avaliação de ativos, aporte e acompanhamento.
+ *Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
+ 
+*Para Devedores:
+ *Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
+ *Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
 
-Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
-Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
 Para Plataforma (Gestão):
-
 Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
 Relatórios Detalhados: Acompanhamento do desempenho dos títulos emitidos.
 Governança e Compliance: Transparência e conformidade com medidas rigorosas.
