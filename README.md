@@ -7,6 +7,8 @@ We envision a future where small and medium-sized businesses have the same acces
 - [Watch the Demo Video](https://www.youtube.com/watch?v=Gnh9bY__bAY)
 - [Watch the Project Pitch](https://www.youtube.com/watch?v=Bh4M_Bzb5JM)
 
+![Login Screen](/Images/login.png)
+
 # Key Features
  + Asset Diversification: Tokenization of various types of receivables based on the needs of debtors.
  + Governance and Compliance: Strict measures to ensure transparency and regulatory compliance for investments.
@@ -17,9 +19,13 @@ We envision a future where small and medium-sized businesses have the same acces
  + Investment: Asset evaluation, contribution, and tracking.
  + Portfolio: Viewing investments, returns, and maturity dates.
  
+![Investor Dashboard](/Images/investordashboard.png)
+
 # Debtor Components
  + Fundraising: Tokenization requests and tracking of the fundraising process.
  + Payment Management: Managing payments at maturity.
+
+![User Dashboard](/Images/userdashboard.png)
 
 # Platform Components (Management)
  + Receivables Tokenization: Issuance of tokens for various assets.
