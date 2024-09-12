@@ -1,32 +1,33 @@
-# HACKA_BRASA_2024: Tokenização para Democratização do Mercado de Capitais
-Este repositório contém o código e a documentação do nosso projeto para o HACKA_BRASA 2024. Nosso objetivo é desenvolver uma solução inovadora de tokenização que facilite o acesso ao mercado de capitais, especialmente para pequenas e médias empresas. A solução visa permitir que investidores diversifiquem seus portfólios com ativos de alta qualidade de forma transparente, eficiente e segura.
+# HACKA_BRASA_2024: Tokenization for the Democratization of the Capital Market
+This repository contains the code and documentation for our project for HACKA_BRASA 2024. Our goal is to develop an innovative tokenization solution that facilitates access to the capital market, especially for small and medium-sized businesses. The solution aims to allow investors to diversify their portfolios with high-quality assets in a transparent, efficient, and secure manner.
 
-# Descrição do Projeto (Visão Geral)
-Imaginamos um futuro onde pequenas e médias empresas tenham o mesmo acesso ao mercado de capitais que as grandes corporações. Nossa solução de tokenização facilita a emissão de tokens lastreados por recebíveis, regidos por contratos inteligentes personalizados para cada devedor. Além disso, oferecemos aos investidores fácil acesso a diversas oportunidades de investimento, permitindo o acompanhamento detalhado do rendimento de seus tokens em suas carteiras individuais.
+# Project Description (Overview)
+We envision a future where small and medium-sized businesses have the same access to the capital market as large corporations. Our tokenization solution facilitates the issuance of tokens backed by receivables, governed by smart contracts tailored to each debtor. Additionally, we offer investors easy access to various investment opportunities, allowing them to track the performance of their tokens in individual portfolios.
 
-# Funcionalidades Principais
- + Diversificação de Ativos: Tokenização de diversos tipos de recebíveis de acordo com a necessidade dos devedores.
- + Governança e Compliance: Medidas rigorosas para assegurar a transparência e conformidade regulatória para investimentos.
- + Automação e Eficiência: Uso de contratos inteligentes para automatizar a emissão, gestão e liquidação de tokens.
- + Segurança: Garantia de segurança dos dados e conformidade com as regulamentações vigentes.
+# Key Features
+ + Asset Diversification: Tokenization of various types of receivables based on the needs of debtors.
+ + Governance and Compliance: Strict measures to ensure transparency and regulatory compliance for investments.
+ + Automation and Efficiency: Use of smart contracts to automate the issuance, management, and settlement of tokens.
+ + Security: Ensuring data security and compliance with current regulations.
 
-# Componentes para Investidores:
- + Investimento: Avaliação de ativos, aporte e acompanhamento.
- + Portfólio: Visualização dos investimentos, rendimentos e vencimentos.
+# Investor Components
+ + Investment: Asset evaluation, contribution, and tracking.
+ + Portfolio: Viewing investments, returns, and maturity dates.
  
-# Componentes para Devedores:
- + Captação de Recursos: Solicitação de tokenização e acompanhamento da captação.
- + Gestão de Pagamentos: Gerenciamento de pagamentos nos vencimentos.
+# Debtor Components
+ + Fundraising: Tokenization requests and tracking of the fundraising process.
+ + Payment Management: Managing payments at maturity.
 
-# Componentes para Plataforma (Gestão):
- + Tokenização de Recebíveis: Emissão de tokens para diversos ativos.
- + Manejo de Dados e Tokens: Gestão centralizada de dados e tokens vinculados a contratos inteligentes, garantindo a integridade das transações e o monitoramento contínuo das condições contratuais.
+# Platform Components (Management)
+ + Receivables Tokenization: Issuance of tokens for various assets.
+ + Data and Token Management: Centralized management of data and tokens tied to smart contracts, ensuring transaction integrity and continuous monitoring of contractual conditions.
 
-# Tecnologias Utilizadas
- + Ethereum Blockchain & Smart Contracts: Automação de processos de tokenização.
- + Frontend: Interface de usuário intuitiva para interação com a plataforma, com distinção para o dashboard de devedores e investidores.
- + Backend: Conexão segura e eficiente com recursos externos, administração de bases de dados interna e criação sistemas para integração e transferência de tokens.
- + Segurança: Implementação de práticas robustas de segurança para proteção de dados e conformidade regulatória.
+# Technologies Used
+ + Ethereum Blockchain & Smart Contracts: Automation of tokenization processes.
+ + Frontend: Intuitive user interface for platform interaction, with a dedicated dashboard for debtors and investors.
+ + Backend: Secure and efficient connection to external resources, management of internal databases, and creation of systems for token integration and transfer.
+ + Security: Implementation of robust security practices for data protection and regulatory compliance.
 
-# Licença
-Este projeto está licenciado sob a MIT License.
+# License
+This project is licensed under the MIT License.
+
