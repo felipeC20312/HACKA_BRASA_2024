@@ -4,6 +4,9 @@ This repository contains the code and documentation for our project for HACKA_BR
 # Project Description (Overview)
 We envision a future where small and medium-sized businesses have the same access to the capital market as large corporations. Our tokenization solution facilitates the issuance of tokens backed by receivables, governed by smart contracts tailored to each debtor. Additionally, we offer investors easy access to various investment opportunities, allowing them to track the performance of their tokens in individual portfolios.
 
+- [Watch the Demo Video](https://www.youtube.com/watch?v=Gnh9bY__bAY)
+- [Watch the Project Pitch](https://www.youtube.com/watch?v=Bh4M_Bzb5JM)
+
 # Key Features
  + Asset Diversification: Tokenization of various types of receivables based on the needs of debtors.
  + Governance and Compliance: Strict measures to ensure transparency and regulatory compliance for investments.
@@ -30,4 +33,3 @@ We envision a future where small and medium-sized businesses have the same acces
 
 # License
 This project is licensed under the MIT License.
-
